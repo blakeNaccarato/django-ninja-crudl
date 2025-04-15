@@ -52,7 +52,6 @@ dev = [
     "pytest-django>=4.9.0",
     "pytest-instafail>=0.5.0",
     "pytest-testmon>=2.1.1",
-    "pytest-watch>=4.2.0",
     # TODO(phuongfi91): pytype causes issue with overlapping ninja packages
     #    "pytype>=2024.10.11",
     "rich>=13.9.4",
@@ -70,6 +69,7 @@ dev = [
     "project-config>=0.9.7",
     "pre-commit>=4.1.0",
     "python-semantic-release>=9.14.0",
+    "watchfiles>=1.0.5",
 ]
 
 [tool.uv.sources]

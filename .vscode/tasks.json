@@ -10,7 +10,7 @@
             "options": {
                 "cwd": "${workspaceFolder}"
             },
-            "command": "ptw --clear --ext .py --runner \"pytest --testmon-forceselect --cov-append --cov-report=lcov:lcov.info --cov-report=xml:coverage.xml --no-header --no-summary --instafail --disable-warnings --tb=native -s -vvv tests\"",
+            "command": "uv run watchfiles --filter python \"uv run pytest --testmon-forceselect --cov-append --cov-report=lcov:lcov.info --cov-report=xml:coverage.xml --no-header --no-summary --instafail --disable-warnings --tb=native -s -vvv tests\" src tests",
             "isBackground": true,
             "group": {
                 "kind": "test",
@@ -31,7 +31,6 @@
             },
             "problemMatcher": [
                 {
-                    "owner": "external",
                     "source": "pytest",
                     "base": "$python",
                     "applyTo": "allDocuments",
@@ -47,7 +46,6 @@
 
                     Note: VSCode does not support (yet) multiline patterns, so the error message is rather meaningless without full traceback.
                     */
-                    "owner": "external",
                     "source": "pytest-tb-native",
                     "applyTo": "allDocuments",
                     "fileLocation": "autoDetect",
